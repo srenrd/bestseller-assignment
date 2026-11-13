@@ -4,9 +4,10 @@ A .NET solution for a product catalog, made up of two projects:
 
 ### `Products.Api`
 A RESTful API built with ASP.NET Core Minimal APIs. It provides endpoints to list, retrieve, and create products.
+When a product is created, the path to said product is returned in the Location header.
 
 ### `Products.Gateway`
-An ASP.NET Core reverse proxy built with YARP. It routes requests to `Products.Api` and logs the duration of each request.
+An ASP.NET Core reverse proxy built with YARP. It routes requests to `Products.Api` and logs the duration of each request to the console.
 
 ## Potential Improvements
 
