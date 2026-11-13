@@ -1,12 +1,15 @@
-The solution contains 2 projects Products.Api and Products.Gateway.
+A .NET solution for a product catalog, made up of two projects:
 
-Products.Api is a RESTful API that provides endpoints for managing products. It is built using ASP.NET Core and Minimal API.
+## Projects
 
-Products.Gateway is a reverse proxy that routes requests to the Products.Api backend. It is built using ASP.NET Core, Minimal API and YARP. 
-It also logs the time taken for each request, providing insights into the performance of the gateway and API.
+### `Products.Api`
+A RESTful API built with ASP.NET Core Minimal APIs. It provides endpoints to list, retrieve, and create products.
 
+### `Products.Gateway`
+An ASP.NET Core reverse proxy built with YARP. It routes requests to `Products.Api` and logs the duration of each request.
 
-A lot of improvements can be made to the solution like:
-Implementing authentication and authorization. server-server between the gateway and the API, and user authentication for the Gateway.
-Adding Swagger/OpenAPI documentation for the API endpoints.
-Switch Entity Framework to something like Dapper for better performance. If performance is weighted higher then development time.
+## Potential Improvements
+
+- Add authentication and authorization, including secure communication between the gateway and API and user authentication at the gateway.
+- Add Swagger/OpenAPI documentation for the API endpoints.
+- Evaluate Dapper as an alternative to Entity Framework if performance becomes more important than development speed.
